@@ -1,0 +1,18 @@
+import pandas as pd
+
+# Reading the CSV file
+df = pd.read_csv('data.csv')
+
+# Displaying the original data
+print("Original Data:")
+print(df)
+
+# Modifying the data (e.g., increasing age by 1)
+df['age'] = df['age'] + 1
+
+# Displaying the modified data
+print("\nModified Data:")
+print(df)
+
+# Writing the modified data to a new CSV file
+df.to_csv('modified_data.csv', index=False)
