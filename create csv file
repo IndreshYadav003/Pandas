@@ -1,0 +1,10 @@
+import pandas as pd 
+Data={
+    'Name':["indresh","atis","Jitendar","kamlesh","rampal"],
+    'roll_no':[1,2,3,4,5],
+    'markes':[34,22,11,66,4]
+
+}
+df=pd.DataFrame(Data,index=[1,2,3,4,5])
+print(df)
+print(df.to_csv("text.csv",index=False,header=['First','Second','third']))
