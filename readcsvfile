@@ -1,0 +1,26 @@
+import pandas as pd
+
+# Reading a CSV file
+df = pd.read_csv('path_to_your_file.csv')
+
+# Displaying the first few rows of the DataFrame
+print(df.head())
+
+
+
+
+
+'''
+# Assuming `df` is your DataFrame
+
+# Writing to a CSV file
+df.to_csv('path_to_output_file.csv', index=False)  # `index=False` to avoid writing row numbers
+
+'''
+
+'''
+name,age,city
+Alice,30,New York
+Bob,25,Los Angeles
+Charlie,35,Chicago
+'''
