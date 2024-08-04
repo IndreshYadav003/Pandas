@@ -1,0 +1,100 @@
+import pandas as pd 
+Data={
+    'Name':["indresh","atis","Jitendar","kamlesh","rampal"],
+    'roll_no':[1,2,3,4,5],
+    'markes':[34,22,11,66,4]
+
+}
+df=pd.DataFrame(Data,index=[1,2,3,4,5])
+print(df)
+'''
+     Name  roll_no  markes
+1   indresh        1      34
+2      atis        2      22
+3  Jitendar        3      11
+4   kamlesh        4      66
+5    rampal        5       4
+'''
+print()
+print("we want to print some head part")
+print(df.head(2))
+'''
+we want to print some head part
+      Name  roll_no  markes
+1  indresh        1      34
+2     atis        2      22
+'''
+print()
+print("we want to print some tail part")
+print(df.tail(2))
+
+'''
+we want to print some tail part
+      Name  roll_no  markes
+4  kamlesh        4      66
+5   rampal        5       4'''
+print("we want to print of duplicate of dataframe",df.duplicated())
+'''we want to print of duplicate of dataframe 1    False
+2    False
+3    False
+4    False
+5    False
+'''
+print("print dimension of data",df.ndim)
+#dtype: bool
+#print dimension of data 2
+print("we want to print only row")
+for row in df.iterrows():
+  print(row)
+'''
+print dimension of data 2
+we want to print only row
+(1, Name       indresh
+roll_no          1
+markes          34
+Name: 1, dtype: object)
+(2, Name       atis
+roll_no       2
+markes       22
+Name: 2, dtype: object)
+(3, Name       Jitendar
+roll_no           3
+markes           11
+Name: 3, dtype: object)
+(4, Name       kamlesh
+roll_no          4
+markes          66
+Name: 4, dtype: object)
+(5, Name       rampal
+roll_no         5
+markes          4
+Name: 5, dtype: object)
+'''
+
+
+print()  
+print("we want to print only col")
+for column in df.items():
+  print(column)
+  '''e want to print only col
+('Name', 1     indresh
+2        atis
+3    Jitendar
+4     kamlesh
+5      rampal
+Name: Name, dtype: object)
+('roll_no', 1    1
+2    2
+3    3
+4    4
+5    5
+Name: roll_no, dtype: int64)
+('markes', 1    34
+2    22
+3    11
+4    66
+5     4
+Name: markes, dtype: int64)
+'''
+
+
